@@ -8,6 +8,8 @@
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
+firestore.indexes.json
+firestore.rules
 
 ### dependencies ###
 /node_modules
