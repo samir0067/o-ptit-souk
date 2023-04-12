@@ -1,12 +1,23 @@
-import React, { FC } from "react"
+import React, { FC, InputHTMLAttributes } from "react"
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
+import { LocalizationProvider, MobileDatePicker } from "@mui/x-date-pickers"
 import * as hookForm from "react-hook-form"
 import { InputAdornment } from "@mui/material"
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
-import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers"
-import { TextField } from "utils/styles/textField.style"
-import { InputFieldProps } from "utils/types"
+import { TextField } from "../utils/styles/textField.style"
 
-const DateField: FC<InputFieldProps> = ({
+type DateFieldProps = {
+  control: hookForm.Control<any> | undefined
+  error: hookForm.FieldErrors
+  name: string
+  label: string
+  placeholder?: string
+  disabled?: boolean
+  helperText?: any
+  icon?: JSX.Element
+  type?: InputHTMLAttributes<unknown>["type"]
+}
+
+const DateField: FC<DateFieldProps> = ({
   control,
   error,
   name,
@@ -16,19 +27,19 @@ const DateField: FC<InputFieldProps> = ({
   type,
   icon,
   helperText,
-}: InputFieldProps) => {
+}: DateFieldProps) => {
   return (
     <hookForm.Controller
       name={name}
       control={control}
       render={({ field: { onChange, onBlur, value, ref } }) => (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DatePicker
+          <MobileDatePicker
             label={label}
             inputFormat="DD/MM/YYYY"
             value={value}
             onChange={(value) => onChange(value)}
-            renderInput={(params: any) => (
+            renderInput={(params) => (
               <TextField
                 {...params}
                 inputRef={ref}
