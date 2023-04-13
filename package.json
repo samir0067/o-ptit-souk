@@ -23,6 +23,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fontsource/dekko": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
     "@fontsource/sintony": "^4.5.9",
     "@hookform/resolvers": "^3.0.1",
