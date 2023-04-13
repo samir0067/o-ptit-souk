@@ -1,7 +1,6 @@
 import React, { ElementType, FC } from "react"
 import { Slide, SxProps, Theme, Typography } from "@mui/material"
 import { VariantTypo } from "utils/types"
-import "@fontsource/sintony/700.css"
 
 type TitleProps = {
   title: string
@@ -17,10 +16,13 @@ const Title: FC<TitleProps> = ({ component, variant, title, sx, slideDirection }
       <Typography
         component={component}
         variant={variant}
-        fontFamily="Sintony"
-        marginY="30px"
-        textAlign="center"
-        sx={{ ...sx, letterSpacing: "5px" }}
+        sx={{
+          ...sx,
+          letterSpacing: "5px",
+          fontFamily: "dekko, cursive",
+          marginY: "30px",
+          textAlign: "center",
+        }}
       >
         {title}
       </Typography>
