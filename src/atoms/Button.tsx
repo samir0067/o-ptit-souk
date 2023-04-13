@@ -64,8 +64,8 @@ Button.defaultProps = {
   padding: "7px 23px",
   variant: "contained",
   color: colors.white,
-  backgroundColor: colors.primary,
-  backgroundColorHover: colors.secondary,
+  backgroundColor: colors.lightBlue,
+  backgroundColorHover: colors.lightBlue,
 }
 
 export default Button
