@@ -6,4 +6,5 @@ export const colors = {
   darkGray: "#40434E",
   black: "#010400",
   white: "#FFFFFA",
+  transparent: "rgba(0,0,0,0)"
 }
