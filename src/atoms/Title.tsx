@@ -22,6 +22,7 @@ export const Title: FC<TitleProps> = ({ component, variant, title, writerEffect,
           letterSpacing: "5px",
           fontFamily: "dekko, cursive",
           marginY: "75px",
+          fontWeight: "bold",
           textAlign: "center",
         }}
       >
