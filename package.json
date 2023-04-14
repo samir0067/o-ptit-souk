@@ -28,7 +28,8 @@
     "@fontsource/sintony": "^4.5.9",
     "@hookform/resolvers": "^3.0.1",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.126",
+    "@mui/material": "^5.12.0",
     "@mui/styled-engine-sc": "^5.11.11",
     "@mui/styles": "^5.11.16",
     "@mui/x-date-pickers": "^5.0.20",
@@ -43,6 +44,7 @@
     "react-scripts": "5.0.1",
     "recoil": "^0.7.7",
     "typescript": "^4.9.5",
+    "typewriter-effect": "^2.19.0",
     "yup": "^1.0.2"
   },
   "devDependencies": {
