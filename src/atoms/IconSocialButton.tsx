@@ -3,12 +3,19 @@ import { Box, IconButton as MuiIconButton } from "@mui/material"
 import { colors } from "../utils/constants"
 import useBreakpoints from "services/hooks/useBreakpoints"
 
-export interface IIconSocialButton {
+type IconSocialButtonProps = {
   iconType: JSX.Element
   size?: "small" | "medium" | "large"
+  background?: string
+  color?: string
 }
 
-export const IconSocialButton: FC<IIconSocialButton> = ({ size, iconType }) => {
+export const IconSocialButton: FC<IconSocialButtonProps> = ({
+  size,
+  iconType,
+  background = colors.black,
+  color = colors.white,
+}: IconSocialButtonProps) => {
   const { downSm } = useBreakpoints()
 
   return (
@@ -22,11 +29,11 @@ export const IconSocialButton: FC<IIconSocialButton> = ({ size, iconType }) => {
       <MuiIconButton
         size={size}
         sx={{
-          color: colors.black,
-          border: `1px solid ${colors.black}`,
+          color: background,
+          border: `1px solid ${background}`,
           "&:hover": {
-            backgroundColor: colors.black,
-            color: colors.white,
+            backgroundColor: background,
+            color: color,
           },
         }}
       >
