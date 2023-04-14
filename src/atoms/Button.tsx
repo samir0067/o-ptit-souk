@@ -4,7 +4,7 @@ import { LoadingButton } from "@mui/lab"
 import { colors } from "utils/constants"
 import "@fontsource/roboto/700.css"
 
-type ButtonProps = {
+export type ButtonProps = {
   label: string
   onClick: () => void
   icon?: ReactNode
