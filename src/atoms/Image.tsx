@@ -3,13 +3,13 @@ import Box from "@mui/material/Box"
 import { SxProps, Theme } from "@mui/material"
 import useBreakpoints from "services/hooks/useBreakpoints"
 
-export interface IImage {
+export type ImageProps = {
   image: string
   width?: number | string
   sx?: SxProps<Theme>
 }
 
-export const Image: FC<IImage> = ({ width, image, sx }) => {
+export const Image: FC<ImageProps> = ({ width, image, sx }: ImageProps) => {
   const { downSm } = useBreakpoints()
 
   return (
