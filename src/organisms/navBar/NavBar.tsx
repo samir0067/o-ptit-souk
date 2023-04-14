@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar"
 import DrawerMenu from "./DrawerMenu"
 import { Button, Slide } from "@mui/material"
 import { useNavigate } from "react-router-dom"
-import LOGO_NOIR from "assets/logoBlack.png"
+import LOGO_BLACK from "assets/logoBlack.png"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import { IconSocialButton } from "atoms/IconSocialButton"
@@ -21,11 +21,11 @@ const NavBar: FC = () => {
         <AppBar position="fixed" sx={{ width: { md: `calc(100%)` }, ml: { md: `230px` } }}>
           <Toolbar>
             <Box component="div" flexGrow={{ xs: 1, md: 0 }} display="flex" justifyContent="center">
-              <Image width="130px" image={LOGO_NOIR} />
+              <Image width="130px" image={LOGO_BLACK} />
             </Box>
             <Box component="div" justifyContent="center" flexGrow={1} display={{ xs: "none", md: "flex" }} />
             <Box component="div" justifyContent="center" display={{ xs: "none", md: "flex" }}>
-              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={1000}>
+              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
                 <Button
                   sx={{
                     ...buttonSx,
@@ -39,21 +39,7 @@ const NavBar: FC = () => {
                   {content.home}
                 </Button>
               </Slide>
-              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={800}>
-                <Button
-                  sx={{
-                    ...buttonSx,
-                    ...(location.pathname === "/prestations" && {
-                      textDecoration: "underline",
-                      fontStyle: "italic",
-                    }),
-                  }}
-                  onClick={() => navigate("/prestations")}
-                >
-                  {content.solution}
-                </Button>
-              </Slide>
-              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={600}>
+              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={1000}>
                 <Button
                   sx={{
                     ...buttonSx,
@@ -67,7 +53,7 @@ const NavBar: FC = () => {
                   {content.ourCard}
                 </Button>
               </Slide>
-              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={400}>
+              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={1500}>
                 <Button
                   sx={{
                     ...buttonSx,
