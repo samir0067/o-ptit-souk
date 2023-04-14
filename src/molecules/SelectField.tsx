@@ -1,6 +1,6 @@
 import React, { FC, InputHTMLAttributes } from "react"
 import * as hookForm from "react-hook-form"
-import { TextField } from "utils/styles/textField.style"
+import { TextField } from "molecules/textField.style"
 
 type SelectFieldProps = {
   control: hookForm.Control<any> | undefined

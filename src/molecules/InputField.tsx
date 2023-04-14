@@ -1,7 +1,7 @@
-import React, {FC, InputHTMLAttributes} from "react"
+import React, { FC, InputHTMLAttributes } from "react"
 import * as hookForm from "react-hook-form"
 import { InputAdornment } from "@mui/material"
-import { TextField } from "utils/styles/textField.style"
+import { TextField } from "molecules/textField.style"
 
 type InputFieldProps = {
   control: hookForm.Control<any> | undefined
