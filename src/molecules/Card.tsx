@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import { Card as MuiCard, CardContent, Grid, Typography } from "@mui/material"
 import Button from "../atoms/Button"
 import { Image } from "../atoms/Image"
-import { colors } from "../utils/constants"
+import { colorsBis } from "../utils/constants/constants"
 import styles from "./card.module.css"
 
 type CardProps = {
@@ -26,7 +26,7 @@ const Card: FC<CardProps> = ({
   btnOnClick,
   widthImg = "100%",
   titleColor,
-  backgroundColor = colors.lightCoral,
+  backgroundColor = colorsBis.extraLightNavy,
   btnBackgroundColor,
   btnColor,
   gridMargin = "24px",
