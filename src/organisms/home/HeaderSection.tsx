@@ -1,11 +1,12 @@
 import React, { FC } from "react"
 import { Box, Grid, SxProps, Typography } from "@mui/material"
 import ShapeBackground from "assets/shapeBackground.png"
-import ChocoCake from "assets/images/chocoCake.png"
+import ChocoCake from "assets/images/macarons.png"
 import { Title } from "../../atoms/Title"
 import NavBar from "../navBar/NavBar"
 import useBreakpoints from "../../services/hooks/useBreakpoints"
 import Typewriter from "typewriter-effect"
+import { rotate } from "../../utils/styles/keyframes.style"
 
 const HeaderSection: FC = () => {
   const { downSm, downMd } = useBreakpoints()
@@ -24,6 +25,7 @@ const HeaderSection: FC = () => {
     justifyContent: "left",
   }
   const imgStyles: SxProps = {
+    animation: `${rotate} 2s ease 0s 1 normal forwards`,
     marginTop: "120px",
     width: "90%",
     height: "100%",
@@ -38,7 +40,8 @@ const HeaderSection: FC = () => {
   }
   const titleStyles: SxProps = {
     textAlign: "center",
-    fontWeight: "bold",
+    fontStyle: "italic",
+    fontWeight: "500",
   }
 
   return (
@@ -51,7 +54,6 @@ const HeaderSection: FC = () => {
         </Grid>
         <Grid item xs={12} md={8} sx={gridTitles}>
           <Title
-            slideDirection="right"
             component="h1"
             variant={downSm ? "h5" : downMd ? "h4" : "h3"}
             title={content.title}
@@ -66,7 +68,7 @@ const HeaderSection: FC = () => {
               />
             }
           />
-          <Typography variant={downSm ? "h6" : "h4"} component="h3" gutterBottom sx={titleStyles}>
+          <Typography variant={downSm ? "h6" : "h5"} component="h3" gutterBottom sx={titleStyles}>
             {content.subTitle}
           </Typography>
         </Grid>
