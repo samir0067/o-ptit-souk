@@ -5,7 +5,7 @@ import styles from "./carouselSection.module.css"
 
 const CarouselSection: FC = () => {
   return (
-    <Box component="div">
+    <Box component="div" className={styles.container}>
       <Grid container columnSpacing={{ xs: 1, md: 3 }} sx={{ zIndex: 2 }}>
         <Grid item xs={12} className={styles.gridCarousel}>
           <Carousel />
