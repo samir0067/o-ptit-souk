@@ -1,6 +1,6 @@
 import { TextField as MuiTextField } from "@mui/material"
 import { styled } from "@mui/material/styles"
-import { colors } from "utils/constants"
+import { colors } from "utils/constants/constants"
 
 /**
  * Style components for form fields
