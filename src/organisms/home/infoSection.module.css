@@ -1,0 +1,38 @@
+.containerImage {
+  background-image: url("../../assets/taostsBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.gridContainer {
+  z-index: 2;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.centerCard {
+  position: relative;
+  bottom: 50px;
+}
+
+/*
+xs, extra-petit : 0px
+sm, petit : 600px
+md, moyen : 900px
+lg, grand : 1 200 pixels
+xl, extra-large : 1536px
+*/
+
+@media (max-width: 900px) {
+  .centerCard {
+    position: inherit;
+  }
+}
