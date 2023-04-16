@@ -1,6 +1,6 @@
 import { TextField as MuiTextField } from "@mui/material"
 import { styled } from "@mui/material/styles"
-import { colors } from "utils/constants/constants"
+import { colorsBis } from "utils/constants/constants"
 
 /**
  * Style components for form fields
@@ -10,22 +10,22 @@ export const TextField = styled(MuiTextField)(() => ({
   margin: "10px 0",
   zIndex: 0,
   "& .MuiOutlinedInput-root": {
-    backgroundColor: colors.white,
+    backgroundColor: colorsBis.white,
     borderRadius: "9px",
     "&:hover fieldset": {
-      borderColor: colors.lightBlue,
+      borderColor: colorsBis.lightNavy,
     },
     "&.Mui-focused fieldset": {
-      borderColor: colors.darkBlue,
+      borderColor: colorsBis.darkNavy,
     },
   },
   label: {
-    color: colors.black,
+    color: colorsBis.black,
   },
   "& label.Mui-focused": {
-    color: colors.darkBlue,
+    color: colorsBis.darkNavy,
   },
   "& .MuiInput-underline:after": {
-    borderColor: colors.darkBlue,
+    borderColor: colorsBis.darkNavy,
   },
 }))

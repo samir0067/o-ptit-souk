@@ -11,15 +11,15 @@
   margin-top: 5%;
   color: #FFFFFA;
   text-shadow: 1px 0 #010400, -1px 0 #010400, 0 1px #010400, 0 -1px #010400, 1px 1px #010400, -1px -1px #010400, 1px -1px #010400, -1px 1px #010400;
-  background-color: #c9ede8;
-  margin-right: 24px;
+  background-color: #57C5B6;
+  margin-right: 24px!important;
 }
 
 .imgStyles {
   width: 100%;
   height: 70vh;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 /*
@@ -41,9 +41,5 @@ xl, extra-large : 1536px
   /* Styles pour les écrans de 768px ou moins */
   .titleStyles {
     font-size: 20px;
-  }
-
-  .imgStyles {
-    border-radius: 10%;
   }
 }
