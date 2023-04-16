@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import { Box, ListItemButton, ListItemText } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import ListItemIcon from "@mui/material/ListItemIcon"
-import { colors } from "../../utils/constants"
+import { colorsBis } from "../../utils/constants/constants"
 
 type ListItemLinkProps = {
   to: string
@@ -23,7 +23,7 @@ export const ListItemLink: FC<ListItemLinkProps> = ({ icon, pathname, title, to 
             sx={{
               fontWeight: "bold",
               textTransform: "uppercase",
-              color: colors.white,
+              color: colorsBis.white,
               ...(location.pathname === pathname && {
                 textDecoration: "underline",
                 fontStyle: "italic",

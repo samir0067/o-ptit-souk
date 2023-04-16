@@ -7,7 +7,7 @@ import LOGO_WHITE from "assets/logoWhite.png"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import { IconSocialButton } from "../../atoms/IconSocialButton"
-import { colors } from "../../utils/constants"
+import { colorsBis } from "../../utils/constants/constants"
 
 const DrawerMenu: FC = () => {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false)
@@ -49,12 +49,17 @@ const DrawerMenu: FC = () => {
           </ListItem>
           <Divider />
           <Box component="div" my="1rem" justifyContent="center" display={{ xs: "flex", md: "none" }}>
-            <IconSocialButton size="small" iconType={<FacebookIcon />} background={colors.white} color={colors.black} />
+            <IconSocialButton
+              size="small"
+              iconType={<FacebookIcon />}
+              background={colorsBis.white}
+              color={colorsBis.black}
+            />
             <IconSocialButton
               size="small"
               iconType={<InstagramIcon />}
-              background={colors.white}
-              color={colors.black}
+              background={colorsBis.white}
+              color={colorsBis.black}
             />
           </Box>
           <Divider />
