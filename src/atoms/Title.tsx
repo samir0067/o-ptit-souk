@@ -9,14 +9,24 @@ type TitleProps = {
   sx?: SxProps<Theme>
   slideDirection?: "right" | "left" | "up" | "down"
   writerEffect?: JSX.Element
+  className?: string
 }
 
-export const Title: FC<TitleProps> = ({ component, variant, title, writerEffect, sx, slideDirection }: TitleProps) => {
+export const Title: FC<TitleProps> = ({
+  component,
+  variant,
+  title,
+  writerEffect,
+  sx,
+  slideDirection,
+  className,
+}: TitleProps) => {
   return (
     <Slide direction={slideDirection} in={true} mountOnEnter unmountOnExit timeout={400}>
       <Typography
         component={component}
         variant={variant}
+        className={className}
         sx={{
           ...sx,
           letterSpacing: "5px",

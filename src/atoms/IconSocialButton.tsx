@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { Box, IconButton as MuiIconButton } from "@mui/material"
-import { colors } from "../utils/constants"
+import { colorsBis } from "../utils/constants/constants"
 import useBreakpoints from "services/hooks/useBreakpoints"
 
 type IconSocialButtonProps = {
@@ -13,8 +13,8 @@ type IconSocialButtonProps = {
 export const IconSocialButton: FC<IconSocialButtonProps> = ({
   size,
   iconType,
-  background = colors.black,
-  color = colors.white,
+  background = colorsBis.black,
+  color = colorsBis.white,
 }: IconSocialButtonProps) => {
   const { downSm } = useBreakpoints()
 

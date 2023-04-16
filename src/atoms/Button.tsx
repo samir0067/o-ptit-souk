@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react"
 import { SxProps } from "@mui/material"
 import { LoadingButton } from "@mui/lab"
-import { colors } from "utils/constants"
+import { colorsBis } from "utils/constants/constants"
 import "@fontsource/roboto/700.css"
 
 export type ButtonProps = {
@@ -37,9 +37,9 @@ const Button: FC<ButtonProps> = ({
   margin = "10px 0",
   padding = "7px 23px",
   variant = "contained",
-  color = colors.white,
-  backgroundColor = colors.lightBlue,
-  backgroundColorHover = colors.lightBlue,
+  color = colorsBis.white,
+  backgroundColor = colorsBis.lightNavy,
+  backgroundColorHover = colorsBis.lightNavy,
 }: ButtonProps) => {
   return (
     <LoadingButton
