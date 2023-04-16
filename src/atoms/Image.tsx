@@ -6,10 +6,11 @@ import useBreakpoints from "services/hooks/useBreakpoints"
 export type ImageProps = {
   image: string
   width?: number | string
-  sx?: SxProps<Theme>
+  className?: string
+  sxContainer?: SxProps<Theme>
 }
 
-export const Image: FC<ImageProps> = ({ width, image, sx }: ImageProps) => {
+export const Image: FC<ImageProps> = ({ width, image, sxContainer, className }: ImageProps) => {
   const { downSm } = useBreakpoints()
 
   return (
@@ -18,9 +19,9 @@ export const Image: FC<ImageProps> = ({ width, image, sx }: ImageProps) => {
       flexDirection="column"
       alignItems={downSm ? "center" : "flex-start"}
       justifyContent="center"
-      sx={sx}
+      sx={sxContainer}
     >
-      <img width={width} height="auto" src={image} alt="Logo" />
+      <img width={width} height="auto" src={image} alt="Logo" className={className} />
     </Box>
   )
 }

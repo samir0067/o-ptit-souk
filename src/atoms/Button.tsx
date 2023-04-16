@@ -14,6 +14,7 @@ export type ButtonProps = {
   padding?: string
   disabled?: boolean
   loading?: boolean
+  className?: string
   loadingPosition?: "start" | "center" | "end"
   size?: "medium" | "small" | "large"
   variant?: "text" | "contained" | "outlined"
@@ -27,6 +28,7 @@ const Button: FC<ButtonProps> = ({
   onClick,
   icon,
   sx,
+  className,
   disabled = false,
   loading = false,
   loadingPosition = "center",
@@ -48,6 +50,7 @@ const Button: FC<ButtonProps> = ({
       variant={variant}
       onClick={onClick}
       disabled={disabled}
+      className={className}
       sx={{
         ...sx,
         margin: margin,

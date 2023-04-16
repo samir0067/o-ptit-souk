@@ -1,0 +1,59 @@
+.gridCard {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.card {
+  border-radius: 25px!important;
+  padding: 15px;
+}
+
+.img {
+  border-radius: 25px;
+  height: 300px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  text-align: center;
+}
+
+/*
+xs, extra-petit : 0px
+sm, petit : 600px
+md, moyen : 900px
+lg, grand : 1 200 pixels
+xl, extra-large : 1536px
+*/
+
+@media (max-width: 900px) {
+  /* Styles pour les écrans de 768px ou moins */
+  .card {
+    padding: 5px;
+  }
+
+  .cardContent {
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .btn {
+    align-self: flex-start;
+  }
+}
