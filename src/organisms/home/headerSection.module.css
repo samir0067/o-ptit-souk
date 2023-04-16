@@ -1,0 +1,8 @@
+.containerStyle {
+  min-height: 40vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgb(201,237,232);
+  background: radial-gradient(circle, rgba(201, 237, 232, 1) 0%, rgba(87, 197, 182, 1) 100%);
+}

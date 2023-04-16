@@ -1,23 +1,16 @@
 import React, { FC } from "react"
 import { Box, Grid, SxProps, Typography } from "@mui/material"
-import ShapeBackground from "assets/shapeBackground.png"
 import ChocoCake from "assets/images/macarons.png"
 import { Title } from "../../atoms/Title"
 import NavBar from "../navBar/NavBar"
 import useBreakpoints from "../../services/hooks/useBreakpoints"
 import Typewriter from "typewriter-effect"
 import { rotate } from "../../utils/styles/keyframes.style"
+import styles from "./headerSection.module.css"
 
 const HeaderSection: FC = () => {
   const { downSm, downMd } = useBreakpoints()
 
-  const containerStyle: SxProps = {
-    minHeight: "40vh",
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
-  }
-  const backgroundImgStyle: SxProps = { position: "absolute", right: 0, zIndex: 1, height: "75%" }
   const gridImgStyles: SxProps = {
     display: downMd ? "none" : "flex",
     overflow: "hidden",
@@ -45,9 +38,8 @@ const HeaderSection: FC = () => {
   }
 
   return (
-    <Box component="div" sx={containerStyle}>
+    <Box component="div" className={styles.containerStyle}>
       <NavBar />
-      <Box component="img" src={ShapeBackground} sx={backgroundImgStyle} />
       <Grid container rowSpacing={{ xs: 1, md: 3 }} columnSpacing={{ xs: 1, md: 3 }} sx={{ zIndex: 2 }}>
         <Grid item xs={12} md={4} sx={gridImgStyles}>
           <Box component="img" src={ChocoCake} sx={imgStyles} />
