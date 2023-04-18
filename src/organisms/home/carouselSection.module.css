@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  height: 65vh;
 }
 
 .containerCarousel {
@@ -20,10 +20,11 @@
 
 .titleStyles {
   position: absolute;
-  margin-top: 5%;
+  margin-top: 24px !important;
   color: #FFFFFA;
   text-shadow: 1px 0 #010400, -1px 0 #010400, 0 1px #010400, 0 -1px #010400, 1px 1px #010400, -1px -1px #010400, 1px -1px #010400, -1px 1px #010400;
   background-color: #57C5B6;
+  font-size: 30px !important;
   margin-right: 15% !important;
 }
 
@@ -31,7 +32,7 @@
   width: 100%;
   height: 50vh;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 20px;
 }
 
 /*
@@ -43,15 +44,20 @@ xl, extra-large : 1536px
 */
 
 @media (max-width: 900px) {
-  /* Styles pour les écrans de 768px ou moins */
+  /* Styles pour les écrans de 900px ou moins */
   .titleStyles {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 }
 
 @media (max-width: 600px) {
-  /* Styles pour les écrans de 768px ou moins */
+  /* Styles pour les écrans de 600px ou moins */
+  .containerCarousel {
+    padding: 24px;
+  }
+
   .titleStyles {
-    font-size: 20px;
+    font-size: 18px !important;
+    margin-right: 24px !important;
   }
 }

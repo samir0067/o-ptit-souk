@@ -27,7 +27,7 @@ const CarouselSection: FC = () => {
             <Slider {...settings}>
               {dataBuffets.map((buffets, index: number) => (
                 <Box key={index} className={styles.containerCarousel}>
-                  <Title title={buffets.title} variant="h3" component="h2" className={styles.titleStyles} />
+                  <Title title={buffets.title} variant="h5" component="p" className={styles.titleStyles} />
                   <Box component="img" src={buffets.index} alt={buffets.name} className={styles.imgStyles} />
                 </Box>
               ))}
