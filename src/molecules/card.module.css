@@ -7,12 +7,12 @@
 }
 
 .card {
-  border-radius: 25px!important;
-  padding: 15px;
+  border-radius: 20px!important;
+  padding: 10px;
 }
 
 .img {
-  border-radius: 25px;
+  border-radius: 20px 20px 0 0;
   height: 300px;
 }
 
@@ -43,7 +43,7 @@ xl, extra-large : 1536px
 @media (max-width: 900px) {
   /* Styles pour les écrans de 768px ou moins */
   .card {
-    padding: 5px;
+    padding: 0;
   }
 
   .cardContent {
