@@ -26,6 +26,7 @@
   background-color: #57C5B6;
   font-size: 30px !important;
   margin-right: 15% !important;
+  width: 70%;
 }
 
 .imgStyles {
@@ -59,5 +60,6 @@ xl, extra-large : 1536px
   .titleStyles {
     font-size: 18px !important;
     margin-right: 24px !important;
+    width: auto;
   }
 }
