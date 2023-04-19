@@ -2,12 +2,12 @@ import React, { FC } from "react"
 import { Container, Paper } from "@mui/material"
 import Footer from "molecules/Footer"
 
-type StructureProps = {
+type ItemLayoutProps = {
   main: JSX.Element
   titleHeader: string
 }
 
-const ItemLayout: FC<StructureProps> = ({ main }: StructureProps) => {
+const ItemLayout: FC<ItemLayoutProps> = ({ main }: ItemLayoutProps) => {
   return (
     <>
       <Container maxWidth="lg">
