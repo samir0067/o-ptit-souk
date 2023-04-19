@@ -11,9 +11,10 @@ import InputField from "../molecules/InputField"
 import HowToRegIcon from "@mui/icons-material/HowToReg"
 import Button from "../atoms/Button"
 import { setUser, User } from "services/store/userSlice"
-import { useAppDispatch } from "../services/hooks/useState"
+import { useAppDispatch, useAppSelector } from "../services/hooks/useState"
 import styles from "./signUp.module.css"
 import AuthLayout from "../templates/AuthLayout"
+import { RootState } from "services/store"
 
 const SignUp: FC = () => {
   const navigate = useNavigate()
@@ -53,6 +54,16 @@ const SignUp: FC = () => {
     reValidateMode: "onBlur",
     shouldFocusError: false,
   })
+
+  const user = useAppSelector((state: RootState) => state.user)
+
+  if (user) {
+    console.log(" L'utilisateur est connecté ==>", user)
+    // L'utilisateur est connecté
+  } else {
+    console.log(" L'utilisateur est déconnecté==>")
+    // L'utilisateur est déconnecté
+  }
 
   return (
     <AuthLayout

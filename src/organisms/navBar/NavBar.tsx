@@ -57,6 +57,20 @@ const NavBar: FC = () => {
                 <Button
                   sx={{
                     ...buttonSx,
+                    ...(location.pathname === "/inscription" && {
+                      textDecoration: "underline",
+                      fontStyle: "italic",
+                    }),
+                  }}
+                  onClick={() => navigate("/inscription")}
+                >
+                  {content.login}
+                </Button>
+              </Slide>
+              <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={2000}>
+                <Button
+                  sx={{
+                    ...buttonSx,
                     ...(location.pathname === "/contact" && {
                       textDecoration: "underline",
                       fontStyle: "italic",
@@ -90,6 +104,7 @@ const content = {
   home: "Accueil",
   solution: "Prestations",
   ourCard: "Notre carte",
+  login: "Identifiez-vous",
   contact: "Contact",
 }
 
