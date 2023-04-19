@@ -1,0 +1,39 @@
+.containerImage {
+  background-image: url("../assets/cupCakeBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../assets/brookeBack.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.title {
+  color: #FFFFFA;
+  text-shadow: 1px 0 #010400, -1px 0 #010400, 0 1px #010400, 0 -1px #010400, 1px 1px #010400, -1px -1px #010400, 1px -1px #010400, -1px 1px #010400;
+}
+
+.containerIllustration {
+  width: 50%;
+  min-height: 350px;
+}
+
+@media (max-width: 600px) {
+  /* Styles pour les écrans de 600px ou moins */
+  .containers {
+    flex-direction: column;
+  }
+}
