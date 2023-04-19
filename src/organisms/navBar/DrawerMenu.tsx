@@ -66,6 +66,7 @@ const DrawerMenu: FC = () => {
           <List component="nav">
             <ListItemLink to="/" pathname="/" title={content.home} />
             <ListItemLink to="/carte" pathname="/carte" title={content.ourCard} />
+            <ListItemLink to="/inscription" pathname="/inscription" title={content.login} />
             <ListItemLink to="/contact" pathname="/contact" title={content.contact} />
           </List>
         </Box>
@@ -78,6 +79,7 @@ const content = {
   home: "Accueil",
   solution: "Prestations",
   ourCard: "Notre carte",
+  login: "Identifiez-vous",
   contact: "Contact",
 }
 
