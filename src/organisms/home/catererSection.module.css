@@ -1,6 +1,6 @@
 .container {
-  min-height: 20vh;
-  padding: 24px;
+  min-height: 10vh;
+  padding: 90px 24px 24px 24px;
 }
 
 .content {
@@ -10,8 +10,8 @@
   padding: 24px;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: rgb(201, 237, 232);
-  background: radial-gradient(circle, rgba(201, 237, 232, 1) 0%, rgba(87, 197, 182, 1) 100%);
+  background: rgb(201,237,232);
+  background: linear-gradient(90deg, rgba(201,237,232,1) 0%, rgba(255,255,250,1) 100%);
 }
 
 .title {
