@@ -1,0 +1,20 @@
+
+.containerForm {
+  background-color: #FFFFFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  width: 50%;
+  min-height: 350px;
+  border-radius: 20px ;
+}
+
+
+@media (max-width: 600px) {
+  /* Styles pour les écrans de 600px ou moins */
+  .containerForm {
+    width: 100%;
+  }
+}
