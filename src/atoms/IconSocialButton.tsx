@@ -5,6 +5,8 @@ import useBreakpoints from "services/hooks/useBreakpoints"
 
 type IconSocialButtonProps = {
   iconType: JSX.Element
+  url?: string
+  onClick?: () => void
   size?: "small" | "medium" | "large"
   background?: string
   color?: string
@@ -13,6 +15,8 @@ type IconSocialButtonProps = {
 export const IconSocialButton: FC<IconSocialButtonProps> = ({
   size,
   iconType,
+  onClick,
+  url,
   background = colorsBis.black,
   color = colorsBis.white,
 }: IconSocialButtonProps) => {
@@ -26,19 +30,22 @@ export const IconSocialButton: FC<IconSocialButtonProps> = ({
       justifyContent="center"
       alignItems={downSm ? "center" : "flex-start"}
     >
-      <MuiIconButton
-        size={size}
-        sx={{
-          color: background,
-          border: `1px solid ${background}`,
-          "&:hover": {
-            backgroundColor: background,
-            color: color,
-          },
-        }}
-      >
-        {iconType}
-      </MuiIconButton>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <MuiIconButton
+          onClick={onClick}
+          size={size}
+          sx={{
+            color: background,
+            border: `1px solid ${background}`,
+            "&:hover": {
+              backgroundColor: background,
+              color: color,
+            },
+          }}
+        >
+          {iconType}
+        </MuiIconButton>
+      </a>
     </Box>
   )
 }
